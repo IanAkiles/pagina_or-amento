@@ -1,0 +1,526 @@
+/* From Uiverse.io by whoisyourdeadie */ 
+.matrix-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  display: flex;
+}
+
+.matrix-pattern {
+  position: relative;
+  width: 1000px;
+  height: 100%;
+  flex-shrink: 0;
+}
+
+.matrix-column {
+  position: absolute;
+  top: -100%;
+  width: 20px;
+  height: 100%;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: bold;
+  animation: fall linear infinite;
+  white-space: nowrap;
+}
+
+.matrix-column::before {
+  content: "アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲンABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    #ffffff 0%,
+    #ffffff 5%,
+    #00ff41 10%,
+    #00ff41 20%,
+    #00dd33 30%,
+    #00bb22 40%,
+    #009911 50%,
+    #007700 60%,
+    #005500 70%,
+    #003300 80%,
+    rgba(0, 255, 65, 0.5) 90%,
+    transparent 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  writing-mode: vertical-lr;
+  letter-spacing: 1px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.matrix-column:nth-child(1) {
+  left: 0px;
+  animation-delay: -2.5s;
+  animation-duration: 3s;
+}
+.matrix-column:nth-child(2) {
+  left: 25px;
+  animation-delay: -3.2s;
+  animation-duration: 4s;
+}
+.matrix-column:nth-child(3) {
+  left: 50px;
+  animation-delay: -1.8s;
+  animation-duration: 2.5s;
+}
+.matrix-column:nth-child(4) {
+  left: 75px;
+  animation-delay: -2.9s;
+  animation-duration: 3.5s;
+}
+.matrix-column:nth-child(5) {
+  left: 100px;
+  animation-delay: -1.5s;
+  animation-duration: 3s;
+}
+.matrix-column:nth-child(6) {
+  left: 125px;
+  animation-delay: -3.8s;
+  animation-duration: 4.5s;
+}
+.matrix-column:nth-child(7) {
+  left: 150px;
+  animation-delay: -2.1s;
+  animation-duration: 2.8s;
+}
+.matrix-column:nth-child(8) {
+  left: 175px;
+  animation-delay: -2.7s;
+  animation-duration: 3.2s;
+}
+.matrix-column:nth-child(9) {
+  left: 200px;
+  animation-delay: -3.4s;
+  animation-duration: 3.8s;
+}
+.matrix-column:nth-child(10) {
+  left: 225px;
+  animation-delay: -1.9s;
+  animation-duration: 2.7s;
+}
+.matrix-column:nth-child(11) {
+  left: 250px;
+  animation-delay: -3.6s;
+  animation-duration: 4.2s;
+}
+.matrix-column:nth-child(12) {
+  left: 275px;
+  animation-delay: -2.3s;
+  animation-duration: 3.1s;
+}
+.matrix-column:nth-child(13) {
+  left: 300px;
+  animation-delay: -3.1s;
+  animation-duration: 3.6s;
+}
+.matrix-column:nth-child(14) {
+  left: 325px;
+  animation-delay: -2.6s;
+  animation-duration: 2.9s;
+}
+.matrix-column:nth-child(15) {
+  left: 350px;
+  animation-delay: -3.7s;
+  animation-duration: 4.1s;
+}
+.matrix-column:nth-child(16) {
+  left: 375px;
+  animation-delay: -2.8s;
+  animation-duration: 3.3s;
+}
+.matrix-column:nth-child(17) {
+  left: 400px;
+  animation-delay: -3.3s;
+  animation-duration: 3.7s;
+}
+.matrix-column:nth-child(18) {
+  left: 425px;
+  animation-delay: -2.2s;
+  animation-duration: 2.6s;
+}
+.matrix-column:nth-child(19) {
+  left: 450px;
+  animation-delay: -3.9s;
+  animation-duration: 4.3s;
+}
+.matrix-column:nth-child(20) {
+  left: 475px;
+  animation-delay: -2.4s;
+  animation-duration: 3.4s;
+}
+.matrix-column:nth-child(21) {
+  left: 500px;
+  animation-delay: -1.7s;
+  animation-duration: 2.4s;
+}
+.matrix-column:nth-child(22) {
+  left: 525px;
+  animation-delay: -3.5s;
+  animation-duration: 3.9s;
+}
+.matrix-column:nth-child(23) {
+  left: 550px;
+  animation-delay: -2s;
+  animation-duration: 3s;
+}
+.matrix-column:nth-child(24) {
+  left: 575px;
+  animation-delay: -4s;
+  animation-duration: 4.4s;
+}
+.matrix-column:nth-child(25) {
+  left: 600px;
+  animation-delay: -1.6s;
+  animation-duration: 2.3s;
+}
+.matrix-column:nth-child(26) {
+  left: 625px;
+  animation-delay: -3s;
+  animation-duration: 3.5s;
+}
+.matrix-column:nth-child(27) {
+  left: 650px;
+  animation-delay: -3.8s;
+  animation-duration: 4s;
+}
+.matrix-column:nth-child(28) {
+  left: 675px;
+  animation-delay: -2.5s;
+  animation-duration: 2.8s;
+}
+.matrix-column:nth-child(29) {
+  left: 700px;
+  animation-delay: -3.2s;
+  animation-duration: 3.6s;
+}
+.matrix-column:nth-child(30) {
+  left: 725px;
+  animation-delay: -2.7s;
+  animation-duration: 3.2s;
+}
+.matrix-column:nth-child(31) {
+  left: 750px;
+  animation-delay: -1.8s;
+  animation-duration: 2.7s;
+}
+.matrix-column:nth-child(32) {
+  left: 775px;
+  animation-delay: -3.6s;
+  animation-duration: 4.1s;
+}
+.matrix-column:nth-child(33) {
+  left: 800px;
+  animation-delay: -2.1s;
+  animation-duration: 3.1s;
+}
+.matrix-column:nth-child(34) {
+  left: 825px;
+  animation-delay: -3.4s;
+  animation-duration: 3.7s;
+}
+.matrix-column:nth-child(35) {
+  left: 850px;
+  animation-delay: -2.8s;
+  animation-duration: 2.9s;
+}
+.matrix-column:nth-child(36) {
+  left: 875px;
+  animation-delay: -3.7s;
+  animation-duration: 4.2s;
+}
+.matrix-column:nth-child(37) {
+  left: 900px;
+  animation-delay: -2.3s;
+  animation-duration: 3.3s;
+}
+.matrix-column:nth-child(38) {
+  left: 925px;
+  animation-delay: -1.9s;
+  animation-duration: 2.5s;
+}
+.matrix-column:nth-child(39) {
+  left: 950px;
+  animation-delay: -3.5s;
+  animation-duration: 3.8s;
+}
+.matrix-column:nth-child(40) {
+  left: 975px;
+  animation-delay: -2.6s;
+  animation-duration: 3.4s;
+}
+
+.matrix-column:nth-child(odd)::before {
+  content: "アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン123456789";
+}
+
+.matrix-column:nth-child(even)::before {
+  content: "ガギグゲゴザジズゼゾダヂヅデドバビブベボパピプペポヴァィゥェォャュョッABCDEFGHIJKLMNOPQRSTUVWXYZ";
+}
+
+.matrix-column:nth-child(3n)::before {
+  content: "アカサタナハマヤラワイキシチニヒミリウクスツヌフムユルエケセテネヘメレオコソトノホモヨロヲン0987654321";
+}
+
+.matrix-column:nth-child(4n)::before {
+  content: "ンヲロヨモホノトソコオレメヘネテセケエルユムフヌツスクウリミヒニチシキイワラヤマハナタサカア";
+}
+
+.matrix-column:nth-child(5n)::before {
+  content: "ガザダバパギジヂビピグズヅブプゲゼデベペゴゾドボポヴァィゥェォャュョッ!@#$%^&*()_+-=[]{}|;:,.<>?";
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-10%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(200%);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .matrix-column {
+    font-size: 14px;
+    line-height: 16px;
+    width: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .matrix-column {
+    font-size: 12px;
+    line-height: 14px;
+    width: 15px;
+  }
+}
+
+
+ /* From Uiverse.io by mamyapro123 */ 
+/* --- THE DOODLE NOTEBOOK CONTAINER --- */
+.doodle-container {
+  list-style: none;
+  margin: 0;
+  padding: 25px 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  /* Beautiful textured lined paper look */
+  background-color: #fdfbf7;
+  background-image: repeating-linear-gradient(
+    transparent,
+    transparent 22px,
+    #8ef0ce 22px,
+    #8ef0ce 24px
+  );
+
+  /* Hand-drawn borders */
+  border: 4px solid #1e1e24;
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px; /* Sketchy wobbly shape */
+
+  /* Heavy pop-art pencil shadow */
+  box-shadow: 8px 10px 0px rgba(30, 30, 36, 0.15);
+
+  /* MAGIC TRICK: Applies the SVG pencil texture to the whole box! */
+  filter: url(#pencil-texture);
+}
+
+.doodle-icon-content {
+  margin: 0;
+  position: relative;
+  font-family: "Patrick Hand", "Comic Sans MS", cursive;
+}
+
+/* --- THE ICONS (Drawn Buttons) --- */
+.doodle-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 49px;
+  height: 50px;
+  text-decoration: none;
+
+  /* Irregular hand-drawn circles */
+  border: 4px solid #1e1e24;
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  box-shadow: 3px 4px 0px #1e1e24; /* Hard pencil outline shadow */
+
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Base Beautiful Pastel Colors */
+.link-spotify {
+  background-color: #caffbf;
+}
+.link-pinterest {
+  background-color: #ffc4d9;
+}
+.link-twitter {
+  background-color: #a0c4ff;
+}
+.link-mail {
+  background-color: #fdffb6;
+}
+
+.doodle-svg {
+  width: 28px;
+  height: 28px;
+  fill: #1e1e24; /* Black pencil icons */
+  transform: rotate(-5deg); /* Badly stamped look */
+  transition: all 0.3s ease;
+}
+
+/* --- CRAZY CRAYON HOVER ANIMATIONS --- */
+.doodle-link:hover {
+  transform: translateY(-8px) scale(1.1);
+  box-shadow: 6px 10px 0px #1e1e24;
+  animation: child-wiggle 0.3s ease-in-out infinite alternate;
+}
+
+/* Crayon Fill Colors on Hover */
+.link-spotify:hover {
+  background-color: #00f5d4; /* Bright cyan */
+  border-radius: 60% 40% 40% 60% / 50% 50% 40% 60%;
+}
+.link-pinterest:hover {
+  background-color: #ff0a54; /* Bright hot pink */
+  border-radius: 50% 50% 60% 40% / 40% 60% 50% 50%;
+}
+.link-twitter:hover {
+  background-color: #00bbf9; /* Bright blue */
+  border-radius: 40% 60% 50% 50% / 60% 40% 60% 40%;
+}
+.link-mail:hover {
+  background-color: #fcd22a; /* Bright yellow */
+  border-radius: 70% 30% 50% 50% / 40% 60% 40% 60%;
+}
+
+/* Make icons white when filled with crayon color */
+.doodle-link:hover .doodle-svg {
+  fill: #ffffff;
+  /* Adds a rough black outline to the white icon to keep it sketchy */
+  filter: drop-shadow(2px 2px 0px #1e1e24) drop-shadow(-1px -1px 0px #1e1e24);
+  transform: rotate(15deg) scale(1.2);
+}
+
+/* Shakes the button like a kid coloring it furiously! */
+@keyframes child-wiggle {
+  0% {
+    transform: translateY(-8px) scale(1.1) rotate(-4deg);
+  }
+  100% {
+    transform: translateY(-8px) scale(1.1) rotate(4deg);
+  }
+}
+
+/* --- THE SPEECH BUBBLE TOOLTIPS (Sticky Notes) --- */
+.doodle-tooltip {
+  position: absolute;
+  top: 0px; /* Starts low and hidden */
+  left: 50%;
+  transform: translateX(-50%) rotate(-5deg); /* Childish crooked tilt */
+
+  padding: 8px 16px;
+  color: #1e1e24;
+
+  /* Wobbly hand-drawn speech bubble */
+  border: 4px solid #1e1e24;
+  border-radius: 255px 25px 225px 25px / 25px 225px 25px 255px;
+  box-shadow: 4px 6px 0px #1e1e24;
+
+  opacity: 0;
+  visibility: hidden;
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: 1px;
+
+  /* Bouncy pop-up animation */
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* The little triangle tail drawn under the speech bubble */
+.doodle-tooltip::after {
+  content: "";
+  position: absolute;
+  bottom: -11px;
+  left: 50%;
+  transform: translateX(-50%) rotate(15deg) skewX(25deg);
+  width: 16px;
+  height: 16px;
+  border-bottom: 4px solid #1e1e24;
+  border-right: 4px solid #1e1e24;
+}
+
+/* Tooltip Beautiful Colors */
+.tooltip-spotify {
+  background-color: #00f5d4;
+}
+.tooltip-spotify::after {
+  background-color: #00f5d4;
+}
+
+.tooltip-pinterest {
+  background-color: #ff0a54;
+  color: #ffffff;
+  text-shadow: 2px 2px 0px #1e1e24;
+}
+.tooltip-pinterest::after {
+  background-color: #ff0a54;
+}
+
+.tooltip-twitter {
+  background-color: #00bbf9;
+}
+.tooltip-twitter::after {
+  background-color: #00bbf9;
+}
+
+.tooltip-mail {
+  background-color: #fcd22a;
+}
+.tooltip-mail::after {
+  background-color: #fcd22a;
+}
+
+/* Tooltip Hover Pop-Up */
+.doodle-icon-content:hover .doodle-tooltip {
+  opacity: 1;
+  visibility: visible;
+  top: -75px;
+  transform: translateX(-50%) rotate(3deg); /* Tilts the other way when popped up! */
+}
+
+/* Integration: decorative background, without intercepting controls or covering video. */
+body.ian-adaptation{position:relative;isolation:isolate;background:#000}
+#site-matrix{position:fixed;inset:0;width:100%;height:100vh;height:100dvh;overflow:hidden;pointer-events:none;z-index:-1;opacity:.5;contain:strict}
+.ian-adaptation main{position:relative;background:transparent}
+.ian-adaptation .creative-hero,.ian-adaptation .projects-section,.ian-adaptation .why-section{background:rgba(3,8,14,.82)}
+.ian-adaptation .value-section,.ian-adaptation .faq-section{background:rgba(255,255,255,.97)}
+.ian-adaptation .process-timeline,.ian-adaptation .site-footer{background:rgba(244,246,248,.97)}
+.matrix-toggle{align-self:center;position:relative;margin:0 auto;padding:8px 14px;min-height:44px;border:1px solid #ffffff50;border-radius:6px;background:#0c1720;color:#e6f2ea;font:13px Arial,sans-serif;cursor:pointer}
+.matrix-toggle:focus-visible{outline:3px solid #65ceff;outline-offset:4px}
+.matrix-paused .matrix-column{animation-play-state:paused!important}
+.ian-social-links{display:flex;justify-content:center;margin:0 auto 48px;padding:24px 10px 12px}
+.ian-social-links .doodle-container{max-width:100%;flex-wrap:wrap;gap:22px;padding:28px;filter:none}
+.ian-social-links .doodle-link{filter:url(#pencil-texture)}
+.ian-social-links .doodle-svg{overflow:visible}
+.ian-social-links .doodle-link:focus-visible{outline:3px solid #12698e;outline-offset:7px}
+.ian-social-links .doodle-icon-content:focus-within .doodle-tooltip{opacity:1;visibility:visible;top:-75px;transform:translateX(-50%) rotate(3deg)}
+@media(max-width:480px){.ian-social-links .doodle-container{padding:20px 14px;gap:18px}.ian-social-links .doodle-link{width:44px;height:46px}.ian-social-links .doodle-tooltip{font-size:14px;padding:7px 10px}}
+@media(prefers-reduced-motion:reduce){#site-matrix .matrix-column{animation:none;top:0;opacity:.35}.ian-social-links *{animation:none!important;transition:none!important}.ian-social-links .doodle-link:hover{transform:none}}
+
+/* LinkedIn brand treatment in the supplied social component. */
+.link-linkedin{background:#b9dcff}.link-linkedin:hover{background:#0a66c2}.tooltip-linkedin,.tooltip-linkedin::after{background:#0a66c2;color:#fff}

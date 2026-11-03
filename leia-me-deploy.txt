@@ -1,0 +1,11 @@
+DEPLOY — IAN AKILES
+
+1. Extraia este ZIP.
+2. Envie index.html e a pasta assets/ juntos para a raiz pública da hospedagem.
+3. Site estático: não exige instalação de dependências ou comando de build.
+4. O contato abre o WhatsApp para revisão e envio; não há backend de e-mail.
+
+Inclui a correção mais recente do contraste do FAQ.
+Recursos e integridade do ZIP verificados. A QA visual no navegador continua pendente.
+Créditos e origens: ORIGENS.txt e comentários dos arquivos CSS.
+Licenciamento da fonte: assets/KGFonts-TOU.txt remete ao site da autora; direitos para publicação comercial não foram verificados.

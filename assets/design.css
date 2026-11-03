@@ -1,0 +1,126 @@
+/* Ian Akiles / digital craft. Existing supplied components, one visual system. */
+:root{--ink:#171a19;--paper:#f0eee7;--muted:#a5aaa6;--lilac:#c5b6f4;--mint:#bfdfc1;--line:#ffffff24;--section-space:clamp(72px,10vw,144px)}
+html{scroll-padding-top:28px}
+body.ian-adaptation{background:#101613;color:#f2f1eb;font-family:"Segoe UI",Arial,sans-serif}
+#site-matrix{opacity:.7}
+.ian-adaptation main{max-width:1800px;margin:auto}
+.skip-content{position:fixed;left:20px;top:12px;z-index:1000;padding:12px 20px;background:var(--paper);color:var(--ink);transform:translateY(-180%)}
+.skip-content:focus{transform:none}
+.ian-adaptation a:focus-visible,.ian-adaptation button:focus-visible{outline:3px solid #ab8eef;outline-offset:5px}
+.ian-adaptation .creative-hero{padding:24px clamp(20px,5vw,88px) 36px;gap:0;background:rgba(15,20,18,.69);border-radius:0 0 44px 44px;border-bottom:1px solid var(--line)}
+.ian-adaptation .creative-hero::before{background:none}
+.ian-adaptation .creative-nav{max-width:1320px;padding:8px 0 24px;border-bottom:1px solid var(--line);gap:20px}
+.ian-brand{font-size:24px;letter-spacing:-1px;color:var(--paper)}
+.ian-brand span{color:var(--lilac)}
+.ian-adaptation .creative-pill{gap:26px;padding:12px 24px;border:1px solid #ffffff15;background:#ffffff06}
+.creative-pill a{color:#d9dcd7;font-size:13px;transition:color .2s}
+.creative-pill a:hover{color:var(--lilac)}
+.ian-adaptation .ian-menu-toggle{border:1px solid #ffffff30;border-radius:50%;font-size:20px}
+#ian-menu{top:68px;background:#202923;border-color:#ffffff30;box-shadow:0 20px 40px #0006}
+.ian-adaptation .creative-hero>.creative-left{order:0;max-width:1150px;padding:80px 0 52px}
+.ian-eyebrow,.section-index,.value-tag{font:500 11px/1.6 Consolas,monospace;letter-spacing:2px;text-transform:uppercase}
+.ian-adaptation .creative-left .ian-eyebrow{display:inline-flex;color:#c8d6c8;background:#ffffff06;border:1px solid #ffffff24;border-radius:100px;padding:8px 15px}
+.ian-adaptation #creative-headline{font-size:clamp(33px,5.4vw,76px);line-height:1.22;max-width:1100px;margin:28px auto 26px;text-wrap:balance;color:#f0eee7}
+.headline-accent{color:var(--lilac)}
+.ian-adaptation .creative-left .ian-lead{max-width:650px;color:#bec5be;font-size:16px;line-height:1.8}
+.ian-actions{gap:16px;margin-top:30px}
+.ian-adaptation .button2{background:var(--paper);border-color:var(--paper);color:var(--ink);border-radius:12px;font:600 14px/1.5 "Segoe UI",Arial,sans-serif;min-height:50px;padding:14px 22px;box-shadow:3px 3px 0 #0004}
+.ian-adaptation .button2::after,.ian-adaptation .button2:hover::before,.ian-adaptation .button2:focus-visible::before{background:#385c48}
+.ian-adaptation .button2:hover,.ian-adaptation .button2:focus-visible{border-color:#385c48;color:#fff}
+.ian-adaptation .creative-left .ian-actions .button2:first-child{background:var(--lilac);border-color:var(--lilac)}
+.ian-adaptation .creative-left .ian-actions .button2:last-child{background:#ffffff08;color:var(--paper);border-color:#ffffff40;box-shadow:none}
+.ian-adaptation .ian-hero-video.liquidglass{width:min(100%,880px);padding:12px;border-radius:24px;background:#ffffff0c;border:1px solid #ffffff40;box-shadow:inset 0 1px #ffffff40,0 24px 70px #0005;line-height:normal}
+.showcase-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:7px 8px 16px;color:#ced8ce;font:10px/1.5 Consolas,monospace;letter-spacing:1px}
+.showcase-bar span:last-child{color:#b7d9ad}
+.ian-adaptation .ian-hero-video.liquidglass video{border-radius:12px;background:#030504;max-height:540px}
+.matrix-toggle{position:absolute!important;bottom:27px;right:5vw;font-size:11px!important;padding:8px 12px!important;color:#b4c2b4!important;border:1px solid #ffffff30!important;border-radius:30px;background:#111a14!important;z-index:2}
+.hero-footnote{display:flex;align-items:center;justify-content:space-between;gap:20px;width:min(100%,880px);margin:24px auto 28px;font:10px/1.6 Consolas,monospace;letter-spacing:1px;color:#a3afa4}
+.hero-footnote a{color:#d8e2d9;text-underline-offset:5px}
+.ian-adaptation .value-section{padding:var(--section-space) 7vw;background:var(--paper);color:var(--ink)}
+.ian-adaptation .value-inner{max-width:1180px;grid-template-columns:1fr 1fr;gap:90px;align-items:start}
+.value-tag{color:#5f665f}
+.ian-adaptation #value-heading{font-size:clamp(36px,4.2vw,60px);line-height:1.08;letter-spacing:-2px;margin:24px 0 0;font-weight:500;text-wrap:balance}
+.ian-adaptation .value-lead{font-size:21px;line-height:1.65;color:#252d27}
+.ian-adaptation .value-muted{font-size:16px;line-height:1.8;color:#626960}
+.value-cta{display:inline-block;font-size:14px;padding:13px 0;border-bottom:1px solid #636b62;text-decoration:none;color:#222d24}
+.section-index{display:block;color:#a5b6a8;text-align:center;margin:0 auto 24px}
+.ian-adaptation .projects-section{padding:var(--section-space) 7vw;background:#111a14b8;border-radius:0;border-block:1px solid var(--line)}
+.ian-adaptation .projects-headline,.ian-adaptation .why-headline{font-family:"Segoe UI",Arial,sans-serif;font-weight:500;font-size:clamp(36px,4.5vw,64px);line-height:1.08;letter-spacing:-2px;text-wrap:balance;max-width:850px}
+.ian-adaptation .projects-sub{color:#b3bdb5;font-size:15px;max-width:590px;text-align:center;line-height:1.8;margin-bottom:54px}
+.ian-adaptation .projects-grid{grid-template-columns:1.12fr 1fr;align-items:stretch;max-width:1180px;gap:36px;padding:0}
+.u-ticket-wrapper{--t-bg:#202922;--t-bg-light:#29332a;--t-accent:#c5b6f4;--t-accent-glow:#c5b6f430;--t-text-muted:#bdc8bd;display:flex;perspective:none}
+.ian-adaptation .u-ticket{display:flex;flex-direction:column;filter:none;box-shadow:0 12px 35px #0003;border-radius:20px;overflow:hidden;transform-style:flat}
+.u-ticket-wrapper:hover .u-ticket{transform:translateY(-5px);box-shadow:0 20px 50px #0004}
+.u-ticket-wrapper:active .u-ticket{transform:translateY(-2px)}
+.u-ticket-wrapper:active .u-t-stub{transform:none;opacity:1}
+.ian-adaptation .u-t-main{flex:1;min-height:0;padding:28px;border-radius:20px 20px 0 0}
+.u-t-main::after{opacity:.13;animation:none;transform:none}
+.u-ticket::after{opacity:.22}
+.u-t-header{margin-bottom:22px}
+.u-t-logo{font-size:11px;letter-spacing:1.5px;font-weight:600}
+.u-t-type{font-size:9px;letter-spacing:1px;padding:6px 10px}
+.ian-adaptation .u-t-title{font-family:"Segoe UI",Arial,sans-serif;font-size:34px;line-height:1.1;text-transform:none;letter-spacing:-1px;background:none;-webkit-text-fill-color:currentColor;color:var(--paper);font-weight:500}
+.ian-adaptation .u-t-subtitle{color:#c0cbc1;font-size:14px;line-height:1.8}
+.u-ticket-preview{border-radius:10px;border:1px solid #ffffff14}
+.u-t-details{margin-top:24px;gap:16px}
+.u-t-value{font-weight:500;color:#e2e9e1;font-size:13px}
+.u-t-label{font:10px/1.5 Consolas,monospace;color:#b0beb2;letter-spacing:1px}
+.u-t-stub{padding:24px 28px;border-radius:0 0 20px 20px}
+.u-t-barcode{opacity:.3;height:24px}
+.u-t-barcode-id{color:#afb9b0}
+.portfolio-wordmark{padding:28px 0 20px;color:var(--lilac);font-size:clamp(34px,4.1vw,62px);font-weight:500;letter-spacing:-2px;line-height:1.04}
+.ian-adaptation .process-timeline{background:var(--paper);color:var(--ink)}
+.ian-adaptation #process-timeline-heading{font-weight:500;font-size:clamp(34px,4.4vw,62px);line-height:1.1;max-width:850px;letter-spacing:-2px}
+.process-timeline .section-index{color:#626d62}
+.ian-adaptation .journey-enabled .process-step{opacity:.6}
+.ian-adaptation .journey-enabled .is-reached.process-step{opacity:1}
+.ian-adaptation .journey-enabled .is-reached .process-number{background:#425b46;border-color:#425b46;color:white}
+.journey-line span{background:#425b46}
+.ian-adaptation .process-step-copy h3{font-weight:500;font-size:24px}
+.ian-adaptation .process-step-copy p{font-size:15px;line-height:1.75;color:#536052}
+.ian-adaptation .contact-style-services{background:#d6ccef;color:#24222b;border:0;border-radius:0;box-shadow:none;margin:0;width:100%;max-width:none;padding:var(--section-space) 7vw;overflow:hidden}
+.contact-style-services .section-index{color:#5b506b}
+.contact-style-services .why-head>.ian-eyebrow{display:none}
+.ian-adaptation .contact-style-services .why-headline{font-family:"Segoe UI",Arial,sans-serif;font-weight:500;font-size:clamp(36px,4.5vw,64px);line-height:1.08;letter-spacing:-2px;text-transform:none;border:0;margin:0 auto 52px;padding:0;color:#24222b}
+.ian-adaptation .why-grid{max-width:1180px;gap:28px;margin:0 auto 48px}
+.ian-adaptation .why-card.u-window{background:#f4f0fa;border:1px solid #27222f;border-radius:18px;box-shadow:5px 5px #463d55;transition:translate .25s}
+.ian-adaptation .u-window-head{background:#eee6fa;color:#4a4059;border-bottom:1px solid #27222f;border-radius:16px 16px 0 0;padding:14px 22px;font:10px/1.4 Consolas,monospace;letter-spacing:2px}
+.u-window-content{padding:28px;gap:0}
+.ian-adaptation .u-window h3{font-size:27px;font-weight:500;letter-spacing:-.7px;color:#24222b;margin-bottom:18px}
+.ian-adaptation .u-window p,.ian-adaptation .u-window ul{color:#635a6e;font-size:14px;line-height:1.8}
+.ian-adaptation .u-window ul{padding-left:18px;margin:4px 0 28px}
+.ian-adaptation .u-window .button2{font-size:12px;width:100%;background:#e1d7f1;border-color:#c6b7db;box-shadow:2px 2px #463d5530;padding:13px 14px}
+.ian-adaptation .why-cta-row .button2{background:#29232f;color:#fff;border:1px solid #29232f;border-radius:12px;box-shadow:none}
+.ian-adaptation .faq-section{padding:var(--section-space) 7vw;background:var(--paper)}
+.ian-adaptation .faq-card{background:transparent;padding:0;max-width:940px;border-radius:0;color:var(--ink)}
+.faq-card .section-index{color:#626d62}
+.ian-adaptation .faq-title{font:500 clamp(34px,4.4vw,60px)/1.1 "Segoe UI",Arial,sans-serif;color:var(--ink);text-align:center;letter-spacing:-2px;margin:0 0 48px}
+.ian-adaptation .faq-row{border-bottom:1px solid #c8ccc2}
+.ian-adaptation .faq-question{color:#273027;padding:24px 4px;font-size:17px;line-height:1.5}
+.ian-adaptation .faq-answer-inner{color:#586252;padding:0 44px 24px 4px;font-size:15px;line-height:1.8}
+.faq-toggle{color:#56694f}
+.ian-adaptation .site-footer{padding:var(--section-space) 7vw 28px;background:#101812bf;color:var(--paper);border-top:1px solid var(--line)}
+.ian-adaptation .ian-contact.u-contact-card{max-width:980px;margin:0 auto 64px;padding:50px;background:var(--paper);color:var(--ink);border:1px solid #ffffff60;box-shadow:8px 8px #c5b6f4;border-radius:24px;text-align:left}
+.ian-adaptation .ian-contact.u-contact-card:hover{box-shadow:8px 8px #c5b6f4}
+.u-contact-banner{background:#d2c2ef;color:#30263f;top:30px;right:-85px}
+.ian-adaptation .u-contact-card h2{font-family:"KG Second Chances",Arial,sans-serif;font-size:clamp(28px,3.4vw,44px);text-transform:none;border:0;padding:0;margin:20px 0;color:#282b25}
+.ian-contact p{max-width:560px;color:#62685d;font-size:15px}
+.ian-adaptation .u-contact-card .ian-eyebrow{color:#6b7266}
+.u-contact-card .ian-actions{margin-top:22px;gap:14px}
+.ian-adaptation .ian-contact .button2{background:#e0d5f1;border-color:#c1b3d3;box-shadow:2px 2px #56446730;color:#27222d}
+.u-contact-form{padding-top:32px;border-top:1px solid #cbd0c3;margin-top:32px;gap:10px}
+.u-contact-form label{font-size:13px;font-weight:600;color:#454d3e}
+.ian-adaptation .u-contact-form input,.ian-adaptation .u-contact-form textarea{padding:14px 16px;border:1px solid #bfc6b8;border-radius:10px;background:#faf9f5;font:16px/1.6 "Segoe UI",Arial,sans-serif;color:#222a20}
+.ian-adaptation .u-contact-submit.button2{align-self:flex-start;background:#2c3e30;color:white;border-color:#2c3e30;box-shadow:none;min-width:240px}
+.ian-adaptation .u-contact-help{font-size:12px;color:#65705e}
+.ian-social-links{margin:0 auto 40px;padding:0}
+.ian-social-links .doodle-container{background:#f0eee7;border-radius:16px;max-width:100%;padding:20px 28px;box-shadow:4px 4px #c5b6f460;transform:none}
+.site-footer-bottom{border-color:#ffffff25;color:#bac7bc;font-size:12px;padding-top:24px}
+.site-footer-bottom strong{font-weight:500}
+@media(min-width:1200px){.u-contact-form{display:grid;grid-template-columns:1fr 1fr;gap:12px 28px}.u-contact-form label[for=contact-name]{grid-column:1;grid-row:1}.u-contact-form #contact-name{grid-column:1;grid-row:2;align-self:start}.u-contact-form label[for=contact-message]{grid-column:2;grid-row:1}.u-contact-form #contact-message{grid-column:2;grid-row:2 / span 3;margin-bottom:0}.u-contact-form .u-contact-submit{grid-column:1;grid-row:3;justify-self:start;min-width:0}.u-contact-form .u-contact-help{grid-column:1;grid-row:4}}
+@media(max-width:900px){.ian-adaptation .value-inner{gap:40px}.ian-adaptation .why-grid{grid-template-columns:1fr}.ian-adaptation .why-card.u-window{max-width:650px;width:100%;margin:auto}.u-window-content .button2{max-width:320px}.ian-adaptation .creative-hero>.creative-left{padding-top:56px}.ian-adaptation .projects-grid{gap:24px}}
+@media(max-width:760px){.ian-adaptation .creative-hero{padding:18px 22px 55px;border-radius:0 0 28px 28px}.ian-adaptation .creative-nav{padding-bottom:18px}.ian-brand{font-size:22px}.ian-adaptation .creative-pill{display:none}.ian-adaptation .creative-hero>.creative-left{padding:46px 0 32px}.ian-adaptation #creative-headline{font-size:clamp(29px,6.5vw,46px);line-height:1.3;margin:24px auto}.headline-break{display:none}.ian-adaptation .creative-left .ian-lead{font-size:14px;line-height:1.8}.ian-eyebrow,.section-index,.value-tag{font-size:10px;letter-spacing:1.3px}.ian-actions{gap:12px}.ian-adaptation .button2{padding:12px 16px;font-size:13px}.ian-adaptation .ian-hero-video.liquidglass{padding:8px;border-radius:16px}.showcase-bar{font-size:8px;padding:5px 4px 10px}.showcase-bar span:last-child{display:none}.hero-footnote{font-size:8px;letter-spacing:.5px;margin-bottom:10px}.matrix-toggle{bottom:16px!important;right:22px!important}.ian-adaptation .value-section,.ian-adaptation .projects-section,.ian-adaptation .contact-style-services,.ian-adaptation .faq-section{padding:72px 24px}.ian-adaptation .value-inner{grid-template-columns:1fr;gap:30px}.ian-adaptation .value-lead{font-size:19px}.ian-adaptation .projects-grid{grid-template-columns:1fr;gap:32px}.ian-adaptation .u-t-main{padding:24px}.portfolio-wordmark{font-size:54px}.ian-adaptation .site-footer{padding:72px 24px 24px}.ian-adaptation .ian-contact.u-contact-card{padding:58px 24px 28px;border-width:1px;border-radius:20px;box-shadow:5px 5px #c5b6f4}.ian-adaptation .ian-contact.u-contact-card:hover{box-shadow:5px 5px #c5b6f4}.u-contact-banner{font-size:9px;top:24px;right:-100px}.ian-adaptation .ian-contact .ian-actions{display:grid;grid-template-columns:1fr}.ian-adaptation .u-contact-submit.button2{min-width:0;width:100%;align-self:stretch}.ian-adaptation .journey-enabled #process-timeline-heading{font-size:30px}.process-timeline .section-index{margin-bottom:16px}.ian-adaptation .journey-enabled .process-step-copy p{line-height:1.5}.ian-adaptation .faq-question{font-size:16px}.site-footer-bottom{font-size:11px}}
+@media(prefers-reduced-motion:reduce){.u-ticket-wrapper:hover .u-ticket{transform:none}.ian-adaptation *{scroll-behavior:auto}}
+
+/* Remove the legacy blue mask from the supplied service windows. */
+.ian-adaptation .why-card.u-window::before{display:none}

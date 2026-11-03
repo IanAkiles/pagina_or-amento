@@ -1,0 +1,37 @@
+/* Ajustes solicitados: liquid glass and Uiverse.io / shah1345 buttons. */
+.ian-adaptation .creative-hero{position:relative;isolation:isolate;overflow:hidden}
+.ian-adaptation .creative-hero::before{z-index:-1;border-radius:inherit}
+.ian-adaptation .creative-hero>.creative-portrait{display:none}
+.ian-adaptation .creative-hero>.creative-left{position:relative;z-index:1}
+.ian-adaptation .creative-hero>.ian-hero-video{z-index:1}
+.glass-surface__filter{position:absolute;width:0;height:0;overflow:hidden;pointer-events:none}
+.ian-adaptation .liquidglass{position:relative;isolation:isolate;border:1px solid #ffffff50;border-radius:24px;overflow:hidden;background:rgba(18,24,30,.88);box-shadow:inset 0 0 2px 1px #ffffff59,inset 0 0 10px 4px #ffffff26,0 16px 40px #0003;transform-style:flat}
+@supports(backdrop-filter:blur(12px)){
+.ian-adaptation .liquidglass{background:rgba(18,24,30,.55);backdrop-filter:blur(12px) saturate(1.2);-webkit-backdrop-filter:blur(12px) saturate(1.2)}
+}
+.ian-adaptation .liquidglass::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;border-radius:inherit;background:linear-gradient(135deg,#ffffff15,transparent 60%);backdrop-filter:url(#ian-liquid-glass) saturate(1.2)}
+.ian-adaptation .contact-style-services{background:#fff;color:#111;border:6px solid #000;border-radius:28px;box-shadow:10px 10px #000;margin:32px auto;width:calc(100% - 40px);max-width:1320px;padding:64px 32px;overflow:hidden}
+.contact-style-services .why-head{position:relative;z-index:1;max-width:900px;margin:auto}
+.ian-adaptation .contact-style-services .ian-eyebrow{color:#111;text-align:center}
+.ian-adaptation .contact-style-services .why-headline{font-family:"KG Second Chances",Arial,sans-serif;font-size:clamp(26px,3.3vw,42px);line-height:1.4;letter-spacing:0;text-transform:uppercase;color:#000;border-bottom:2px solid #000;padding-bottom:20px;margin-top:16px}
+.ian-adaptation .why-card.u-window{border-radius:24px;background:#fff;border:3px solid #000;box-shadow:6px 6px #000;isolation:isolate;overflow:hidden}
+.ian-adaptation .u-window-head{background:#111;color:#fff;border-radius:20px 20px 0 0}
+.ian-adaptation .ian-contact.u-contact-card{border-radius:28px;transform:none}
+.ian-adaptation .u-contact-card:hover{transform:none}
+.ian-adaptation .button2{display:inline-flex;align-items:center;justify-content:center;gap:12px;position:relative;isolation:isolate;overflow:hidden;z-index:1;min-height:48px;max-width:100%;padding:.7em 1.7em;border-radius:.5em;border:1px solid #e8e8e8;background:#e8e8e8;color:#090909;font:600 16px/1.5 Arial,sans-serif;text-align:center;text-decoration:none;text-transform:none;white-space:normal;cursor:pointer;box-shadow:6px 6px 12px #0003,-3px -3px 12px #ffffff25;transition:color .2s,border-color .2s,box-shadow .2s;translate:none;transform:none}
+.ian-adaptation .button2::before,.ian-adaptation .button2::after{content:"";position:absolute;border-radius:50%;display:block;z-index:-1;pointer-events:none;transition:all .5s .1s cubic-bezier(.55,0,.1,1)}
+.ian-adaptation .button2::before{left:50%;top:100%;width:140%;height:180%;background:#0000000d;transform:translateX(-50%) scaleY(1) scaleX(1.25)}
+.ian-adaptation .button2::after{left:55%;top:180%;width:160%;height:190%;background:#007c74;transform:translateX(-50%) scaleY(1) scaleX(1.45)}
+.ian-adaptation .button2:hover,.ian-adaptation .button2:focus-visible{color:white;border-color:#007c74;background:#e8e8e8;translate:none;transform:none}
+.ian-adaptation .button2:hover::before,.ian-adaptation .button2:focus-visible::before{top:-35%;background:#007c74;transform:translateX(-50%) scaleY(1.3) scaleX(.8)}
+.ian-adaptation .button2:hover::after,.ian-adaptation .button2:focus-visible::after{top:-45%;transform:translateX(-50%) scaleY(1.3) scaleX(.8)}
+.ian-adaptation .button2:active{box-shadow:inset 4px 4px 12px #bdbdbd,inset -4px -4px 12px #fff}
+.ian-adaptation .button2 .cta-label,.ian-adaptation .button2 .cta-chip{position:relative;color:inherit;background:none;transform:none}
+.ian-adaptation .u-contact-form input,.ian-adaptation .u-contact-form textarea{border-radius:12px}
+@media(max-width:760px){.ian-adaptation .contact-style-services{padding:40px 18px;width:calc(100% - 28px);border-width:4px;box-shadow:5px 5px #000}.ian-adaptation .button2{font-size:14px;padding:.8em 1.1em}.ian-adaptation .why-grid{gap:24px}}
+@media(prefers-reduced-motion:reduce){.ian-adaptation .button2,.ian-adaptation .button2::before,.ian-adaptation .button2::after{transition:none}}
+
+/* Glass belongs only to the top video frame; image stays crisp. */
+.ian-adaptation .ian-hero-video.liquidglass{padding:clamp(10px,2vw,22px);border-radius:28px;background:rgba(255,255,255,.10);box-shadow:inset 0 0 2px 1px #ffffff59,inset 0 0 10px 4px #ffffff26,0 16px 40px #0003}
+.ian-adaptation .ian-hero-video.liquidglass video{position:relative;z-index:1;border-radius:16px;overflow:hidden}
+.ian-adaptation .ian-menu-toggle{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;padding:6px;border-radius:10px}

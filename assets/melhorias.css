@@ -1,0 +1,33 @@
+/* Improvements scoped to Matrix, contact buttons and the existing process. */
+#site-matrix{opacity:.95}
+.ian-adaptation .creative-hero,.ian-adaptation .projects-section{background:rgba(3,8,14,.48)}
+.ian-adaptation .creative-hero::before{background:linear-gradient(#0003,transparent 30% 60%,#0007)}
+.ian-adaptation .value-section,.ian-adaptation .faq-section{background:rgba(255,255,255,.9)}
+.ian-adaptation .process-timeline,.ian-adaptation .site-footer{background:rgba(244,246,248,.9)}
+/* Native scrolling: no wheel/touch interception. Enhanced only with JS and enough height. */
+.ian-adaptation main{overflow:visible}
+.ian-adaptation .process-timeline{display:block;overflow:visible}
+.ian-adaptation #process-timeline-heading{white-space:normal}
+.ian-adaptation .process-step-copy{padding:0}
+.journey-line{display:none}
+.ian-adaptation .process-timeline.journey-enabled{height:300svh;padding:0 6vw;position:relative}
+.journey-enabled .process-timeline-inner{position:sticky;top:0;height:100svh;display:flex;flex-direction:column;justify-content:center;margin:0 auto;padding:40px 0}
+.ian-adaptation .journey-enabled .process-stage{position:relative;grid-template-columns:repeat(4,minmax(0,1fr));gap:30px}
+.journey-enabled .journey-line{display:block;position:absolute;top:22px;left:23px;right:calc(25% - 5px);height:3px;background:#b5bdc2;z-index:0}
+.journey-line span{display:block;width:100%;height:100%;background:#007c74;transform:scaleX(var(--journey-progress,0));transform-origin:left}
+.ian-adaptation .journey-enabled .process-step{position:relative;z-index:1;opacity:.55;transition:opacity .2s}
+.ian-adaptation .journey-enabled .process-step.is-reached{opacity:1}
+.ian-adaptation .journey-enabled .process-number{position:relative;background:#e4e8e8;border:2px solid #8b999e;color:#263238;transition:background .2s,color .2s}
+.ian-adaptation .journey-enabled .is-reached .process-number{background:#007c74;border-color:#007c74;color:#fff}
+@media(max-width:760px){
+.ian-adaptation .process-timeline.journey-enabled{padding:0 22px}
+.journey-enabled .process-timeline-inner{padding:24px 0}
+.ian-adaptation .journey-enabled #process-timeline-heading{font-size:clamp(24px,6vw,32px);margin-bottom:28px}
+.ian-adaptation .journey-enabled .process-stage{grid-template-columns:1fr;gap:22px}
+.ian-adaptation .journey-enabled .process-step{display:grid;grid-template-columns:46px 1fr;gap:18px}
+.ian-adaptation .journey-enabled .process-step-copy h3{font-size:21px;margin-bottom:6px}
+.ian-adaptation .journey-enabled .process-step-copy p{font-size:14px;line-height:1.5}
+.ian-adaptation .journey-enabled .process-number{margin:0}
+.journey-enabled .journey-line{top:23px;bottom:23px;left:22px;right:auto;width:3px;height:auto}
+.journey-line span{transform:scaleY(var(--journey-progress,0));transform-origin:top}
+}

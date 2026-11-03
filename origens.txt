@@ -1,0 +1,5 @@
+Estrutura: HTML e CSS capturados de https://www.jorgewebpro.com/ nesta conversa.
+Conteúdo: descrições do HTML demo-servicos fornecido pelo usuário; o CSS desse HTML não foi usado.
+Vídeo: Filters, recorte 786 x 480, preservando CMD e janela de vídeo.
+Adaptação: seções sem conteúdo correspondente e métricas de clientes de Jorge foram omitidas. Menu e FAQ implementados localmente. Sem alegação de reprodução pixel a pixel ou dos efeitos GSAP originais.
+Validação: estrutura, links internos e arquivos locais. Sem comparação visual automatizada no navegador.

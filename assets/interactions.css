@@ -1,0 +1,65 @@
+/* Awwwards-inspired motion; original components and native navigation retained. */
+.reading-progress{position:fixed;inset:0 0 auto;height:3px;z-index:100;pointer-events:none;background:transparent}
+.reading-progress span{display:block;width:100%;height:100%;background:#c5b6f4;transform:scaleX(0);transform-origin:left}
+.creative-pill a{position:relative;padding:5px 0}
+.creative-pill a::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .25s}
+.creative-pill a:hover::after,.creative-pill a:focus-visible::after,.creative-pill a[aria-current=location]::after{transform:scaleX(1)}
+.creative-pill a[aria-current=location]{color:#d9c9ff}
+#ian-menu a{padding:8px 10px;border-radius:8px;transition:background .2s,color .2s}
+#ian-menu a:hover,#ian-menu a:focus-visible{background:#ffffff12;color:#d9c9ff}
+.ian-adaptation .ian-menu-toggle{transition:background .2s,border-color .2s}
+.ian-adaptation .ian-menu-toggle[aria-expanded=true]{background:#c5b6f4;color:#24202e;border-color:#c5b6f4}
+.ian-adaptation .faq-row{transition:background .2s,padding .2s}
+.ian-adaptation .faq-row.is-open{background:#e4e5dc;padding-inline:16px;border-radius:12px}
+.faq-toggle{transition:transform .25s}
+.faq-question[aria-expanded=true] .faq-toggle{transform:rotate(180deg)}
+.faq-question[aria-expanded=true] .faq-toggle-v{opacity:0}
+.ian-adaptation .u-ticket{transition:transform .3s ease,box-shadow .3s ease;will-change:auto}
+.ian-adaptation .u-ticket-wrapper.pointer-active .u-ticket{transform:perspective(1100px) rotateX(var(--tilt-x,0deg)) rotateY(var(--tilt-y,0deg)) translateY(-4px);box-shadow:0 24px 52px #0005}
+.u-ticket-wrapper:focus-within .u-ticket{outline:2px solid #c5b6f4;outline-offset:5px}
+/* One button family: bold KG lettering, consistent palette, supplied fill animation. */
+.ian-adaptation .button2{--action-bg:#c5b6f4;--action-ink:#292133;--action-hover:#ddcef9;background:var(--action-bg);color:var(--action-ink);border:1px solid var(--action-bg);font-family:"KG Second Chances","Segoe UI",sans-serif;font-weight:400;font-synthesis:none;font-size:13px;line-height:1.65;letter-spacing:.1px;border-radius:14px;min-height:54px;padding:14px 22px;box-shadow:0 3px 0 #0003;transition:background .2s,color .2s,border-color .2s,box-shadow .2s;isolation:isolate}
+.ian-adaptation .button2::after,.ian-adaptation .button2:hover::before,.ian-adaptation .button2:focus-visible::before{background:var(--action-hover)}
+.ian-adaptation .button2:hover,.ian-adaptation .button2:focus-visible{background:var(--action-bg);color:var(--action-ink);border-color:var(--action-hover);box-shadow:0 5px 0 #0003}
+.ian-adaptation .button2:active{box-shadow:0 1px 0 #0003}
+.ian-adaptation .button2 span[aria-hidden=true]{transition:translate .2s;font-family:"Segoe UI",sans-serif;font-size:20px}
+.ian-adaptation .button2:hover span[aria-hidden=true]{translate:2px -2px}
+.ian-adaptation .creative-left .ian-actions .button2:first-child{background:var(--action-bg);border-color:var(--action-bg);color:var(--action-ink)}
+.ian-adaptation .creative-left .ian-actions .button2:last-child{--action-bg:#202a23;--action-ink:#e1e9df;--action-hover:#354a39;background:var(--action-bg);border-color:#83967e;color:var(--action-ink);box-shadow:none}
+.ian-adaptation .u-ticket-link.button2{--action-bg:#bfdfc1;--action-ink:#213626;--action-hover:#d6efd7;background:var(--action-bg);border-color:var(--action-bg);color:var(--action-ink);font-size:12px}
+.ian-adaptation .u-window .button2,.ian-adaptation .why-cta-row .button2{--action-bg:#332b40;--action-ink:#f6f0ff;--action-hover:#514060;background:var(--action-bg);border-color:var(--action-bg);color:var(--action-ink);font-family:"KG Second Chances","Segoe UI",sans-serif;font-size:12px;line-height:1.65;border-radius:14px}
+.ian-adaptation .ian-contact .button2{--action-bg:#d2c3ee;--action-ink:#31263d;--action-hover:#e4d8f7;background:var(--action-bg);border-color:#b8a4d8;color:var(--action-ink);font-size:12px}
+.ian-adaptation .ian-contact .ian-actions .button2:last-child{--action-bg:#f0eee7;--action-hover:#e2dfd3;border-color:#939d8b;box-shadow:none}
+.ian-adaptation .u-contact-submit.button2{--action-bg:#334c39;--action-ink:#fff;--action-hover:#48694f;background:var(--action-bg);border-color:var(--action-bg);color:var(--action-ink)}
+.ian-adaptation .button2:focus-visible{outline:3px solid #8262ae;outline-offset:5px}
+.ian-adaptation .creative-hero .button2:focus-visible,.ian-adaptation .projects-section .button2:focus-visible{outline-color:#e3d0ff}
+.service-selection-note{font-size:12px;color:#586b50;line-height:1.6;margin:8px 0 0}
+@media(max-width:760px){.ian-adaptation .button2{font-size:12px;padding:13px 16px}.ian-adaptation .u-window .button2{font-size:11px}.ian-adaptation .faq-row.is-open{padding-inline:10px}}
+@media(prefers-reduced-motion:reduce){.ian-adaptation .button2,.ian-adaptation .button2::before,.ian-adaptation .button2::after,.faq-toggle,.faq-row,.creative-pill a::after,.ian-adaptation .u-ticket{transition:none!important}.ian-adaptation .u-ticket-wrapper.pointer-active .u-ticket{transform:none}.ian-adaptation .button2:hover span[aria-hidden=true]{translate:none}}
+
+/* FAQ contrast repair: override legacy text gradients and child-level white text. */
+.ian-adaptation .faq-section .faq-title{
+ color:#171a19;
+ -webkit-text-fill-color:#171a19;
+ background:none;
+ -webkit-background-clip:border-box;
+ background-clip:border-box;
+}
+.ian-adaptation .faq-section .faq-row{
+ background:transparent;
+ border-bottom:1px solid #c8ccc2;
+ border-radius:12px;
+ padding-inline:16px;
+}
+.ian-adaptation .faq-section .faq-row.is-open{background:#e4e5dc;padding-inline:16px}
+.ian-adaptation .faq-section .faq-question,
+.ian-adaptation .faq-section .faq-q-text{color:#273027;-webkit-text-fill-color:#273027}
+.ian-adaptation .faq-section .faq-toggle{color:#42513b}
+.ian-adaptation .faq-section .faq-answer-inner,
+.ian-adaptation .faq-section .faq-answer-inner p{color:#414b3c;-webkit-text-fill-color:#414b3c}
+.ian-adaptation .faq-section .faq-answer-inner p{padding:0;margin:0;font:inherit}
+@media(max-width:760px){
+ .ian-adaptation .faq-section .faq-row,
+ .ian-adaptation .faq-section .faq-row.is-open{padding-inline:12px}
+ .ian-adaptation .faq-section .faq-answer-inner{padding-right:4px}
+}

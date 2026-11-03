@@ -1,0 +1,2 @@
+const contact=document.querySelector('.u-contact-card');
+contact.querySelector('form').addEventListener('submit',event=>{event.preventDefault();const form=event.currentTarget;if(!form.reportValidity())return;const name=form.elements.name.value.trim(),message=form.elements.message.value.trim();if(!name||!message)return;const text=`Olá, Ian! Meu nome é ${name}.\n\n${message}`;const url=contact.dataset.whatsapp+'?text='+encodeURIComponent(text);window.open(url,'_blank','noopener,noreferrer');});

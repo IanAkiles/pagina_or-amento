@@ -1,0 +1,336 @@
+/* From Uiverse.io by zeeshan_2112 */ 
+.u-ticket-canvas {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+}
+
+.u-ticket-wrapper {
+  --t-bg: #1e1e24;
+  --t-bg-light: #2b2b36;
+  --t-accent: #7c3aed;
+  --t-accent-glow: rgba(124, 58, 237, 0.5);
+  --t-text-main: #f8fafc;
+  --t-text-muted: #94a3b8;
+  font-size: 10px;
+  perspective: 1000px;
+  display: inline-block;
+}
+
+.u-ticket {
+  position: relative;
+  width: 22em;
+  color: var(--t-text-main);
+  font-family: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
+  transform-style: preserve-3d;
+  transition:
+    transform 0.6s cubic-bezier(0.23, 1, 0.32, 1),
+    box-shadow 0.6s ease;
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.8),
+    0 0 0 1px rgba(255, 255, 255, 0.05);
+  background: transparent;
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+}
+
+.u-ticket-wrapper:hover .u-ticket {
+  transform: rotateX(5deg) rotateY(-10deg) scale(1.02);
+  box-shadow:
+    20px 20px 40px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(255, 255, 255, 0.1),
+    -5px -5px 20px var(--t-accent-glow);
+}
+
+.u-ticket::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 1em;
+  pointer-events: none;
+  background: linear-gradient(
+    115deg,
+    transparent 0%,
+    transparent 40%,
+    rgba(255, 255, 255, 0.1) 45%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0.1) 55%,
+    transparent 60%,
+    transparent 100%
+  );
+  z-index: 10;
+  background-size: 250% 250%;
+  background-position: 100% 100%;
+  transition: background-position 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  mix-blend-mode: overlay;
+}
+
+.u-ticket-wrapper:hover .u-ticket::after {
+  background-position: 0% 0%;
+}
+
+.u-t-main {
+  padding: 2em;
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(
+      circle at bottom left,
+      transparent 1em,
+      var(--t-bg) 1.05em
+    ),
+    radial-gradient(circle at bottom right, transparent 1em, var(--t-bg) 1.05em);
+  background-size: 51% 100%;
+  background-position:
+    bottom left,
+    bottom right;
+  background-repeat: no-repeat;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+}
+
+.u-t-main::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(
+      rgba(124, 58, 237, 0.15) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(124, 58, 237, 0.15) 1px, transparent 1px);
+  background-size: 2em 2em;
+  opacity: 0.6;
+  z-index: 0;
+  pointer-events: none;
+  transform: perspective(500px) rotateX(20deg) scale(1.5);
+  animation: u-grid-scroll 20s linear infinite;
+}
+
+@keyframes u-grid-scroll {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 0 4em;
+  }
+}
+
+.u-t-content {
+  position: relative;
+  z-index: 1;
+}
+
+.u-t-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2em;
+}
+
+.u-t-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-weight: 900;
+  font-size: 1.2em;
+  letter-spacing: -0.05em;
+  color: #fff;
+}
+
+.u-t-logo svg {
+  width: 1.5em;
+  height: 1.5em;
+  fill: var(--t-accent);
+  filter: drop-shadow(0 0 5px var(--t-accent));
+  animation: u-logo-pulse 3s ease-in-out infinite alternate;
+}
+
+@keyframes u-logo-pulse {
+  0% {
+    filter: drop-shadow(0 0 2px var(--t-accent));
+  }
+
+  100% {
+    filter: drop-shadow(0 0 10px var(--t-accent)) brightness(1.2);
+  }
+}
+
+.u-t-type {
+  font-size: 0.6em;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--t-accent);
+  border: 1px solid var(--t-accent);
+  padding: 0.4em 0.8em;
+  border-radius: 99em;
+  font-weight: 700;
+}
+
+.u-t-title {
+  font-size: 2.5em;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 0.2em;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #fff 0%, #a5b4fc 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.u-t-subtitle {
+  color: var(--t-text-muted);
+  font-size: 0.9em;
+  margin-bottom: 2.5em;
+}
+
+.u-t-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5em;
+  margin-bottom: 1em;
+}
+
+.u-t-detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+}
+
+.u-t-label {
+  font-size: 0.6em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--t-text-muted);
+}
+
+.u-t-value {
+  font-size: 1.1em;
+  font-weight: 700;
+  color: var(--t-text-main);
+}
+
+.u-t-perforation {
+  display: flex;
+  justify-content: space-between;
+  height: 1em;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.u-t-perf-line {
+  flex-grow: 1;
+  height: 0;
+  border-top: 2px dashed rgba(255, 255, 255, 0.2);
+  margin: 0 1.5em;
+}
+
+.u-t-stub {
+  padding: 2em;
+  background: radial-gradient(
+      circle at top left,
+      transparent 1em,
+      var(--t-bg-light) 1.05em
+    ),
+    radial-gradient(
+      circle at top right,
+      transparent 1em,
+      var(--t-bg-light) 1.05em
+    );
+  background-size: 51% 100%;
+  background-position:
+    top left,
+    top right;
+  background-repeat: no-repeat;
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.u-t-barcode-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.u-t-barcode {
+  width: 10em;
+  height: 3em;
+  background: repeating-linear-gradient(
+    90deg,
+    #fff 0,
+    #fff 2px,
+    transparent 2px,
+    transparent 4px,
+    #fff 4px,
+    #fff 5px,
+    transparent 5px,
+    transparent 8px,
+    #fff 8px,
+    #fff 12px,
+    transparent 12px,
+    transparent 15px,
+    #fff 15px,
+    #fff 16px,
+    transparent 16px,
+    transparent 18px
+  );
+  opacity: 0.8;
+}
+
+.u-t-barcode-id {
+  font-family: monospace;
+  font-size: 0.7em;
+  color: var(--t-text-muted);
+  letter-spacing: 0.2em;
+  text-align: justify;
+}
+
+.u-t-admit {
+  text-align: right;
+}
+
+.u-t-admit-text {
+  font-size: 0.7em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--t-text-muted);
+}
+
+.u-t-admit-num {
+  font-size: 3em;
+  font-weight: 900;
+  line-height: 1;
+  color: var(--t-accent);
+  text-shadow: 0 0 15px var(--t-accent-glow);
+}
+
+.u-ticket-wrapper:active .u-ticket {
+  transform: rotateX(15deg) rotateY(-5deg) scale(0.98);
+}
+
+.u-ticket-wrapper:active .u-t-stub {
+  transform: translateY(5px) rotateZ(2deg);
+  opacity: 0.8;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+/* Small controls adapted from Uiverse.io / Yaya12085. */
+.u-small-toggle{display:inline-flex;align-items:center;gap:12px;min-height:44px;padding:4px;border:0;background:transparent;color:#fff;cursor:pointer;font-size:13px}.u-switch-track{position:relative;display:block;flex:none;width:72px;height:38px;border-radius:30px;background:#fff;box-shadow:inset 0 0 4px 3px #fff,inset 0 0 12px 1px #0007,5px 8px 14px #0002,inset 0 0 0 2px #0005;transition:transform .25s}.u-switch-track::before{position:absolute;content:"";height:26px;width:26px;left:6px;top:6px;border-radius:50%;background:linear-gradient(130deg,#757272 10%,#fff 11%,#726f6f 62%);box-shadow:0 2px 1px #0005,5px 5px 8px #0005;transition:left .25s,background .25s}.u-small-toggle[aria-expanded=true] .u-switch-track::before,.u-small-toggle[aria-pressed=true] .u-switch-track::before{left:40px;background:linear-gradient(315deg,#000 0%,#414141 70%)}.u-small-toggle:hover .u-switch-track{transform:perspective(100px) rotateX(5deg) rotateY(-5deg)}.u-video-toggle{align-self:center;position:static;margin:0 auto}.u-small-toggle:focus-visible{outline:3px solid #86d8ff;outline-offset:5px;border-radius:6px}
+/* Large actions and window cards adapted from Uiverse.io / vaibhavchandranv. */
+.ian-adaptation .u-big-button{display:inline-flex;justify-content:center;align-items:center;gap:14px;min-height:46px;padding:12px 18px;border:3px solid #000;border-radius:0;box-shadow:4px 4px 0 #000;font-weight:750;background:#4ade80;color:#111;text-decoration:none;font-size:14px;transition:translate .2s,box-shadow .2s,background .2s;cursor:pointer}.ian-adaptation .u-big-button:hover{translate:2px 2px;box-shadow:2px 2px 0 #000;background:#1ac2ff}.ian-adaptation .u-big-button:active{translate:4px 4px;box-shadow:none}.ian-adaptation .u-big-button span{background:none;border-radius:0;width:auto;height:auto;color:inherit}.ian-adaptation .why-card.u-window{min-height:0;height:auto;display:flex;flex-direction:column;padding:0;background:#ff66a3;border:3px solid #000;box-shadow:10px 10px 0 #000;border-radius:0;overflow:hidden;transition:translate .3s}.u-window:hover{translate:0 -4px}.u-window-head{padding:9px 14px;background:#fff;color:#000;border-bottom:3px solid #000;font-size:13px;font-weight:900;letter-spacing:1px}.u-window-content{display:flex;flex-direction:column;align-items:flex-start;padding:26px;flex:1}.ian-adaptation .u-window h3{font-size:26px;color:#111}.ian-adaptation .u-window p,.ian-adaptation .u-window ul{color:#171717}.u-window-content .u-big-button{margin-top:auto}.ian-adaptation .why-grid{gap:32px}.ian-adaptation .why-cta-row .cta-btn{background:#4ade80;color:#000;border:3px solid #000;border-radius:0;box-shadow:4px 4px #000}.why-cta-row .cta-fill{display:none}
+/* Contact adapted from Uiverse.io / 0xnihilism. */
+.ian-adaptation .ian-contact.u-contact-card{position:relative;max-width:690px;padding:82px 36px 36px;background:#fff;border:8px solid #000;box-shadow:15px 15px 0 #000;transform:rotate(-1deg);text-align:left;overflow:hidden;transition:transform .3s,box-shadow .3s;margin-bottom:90px}.ian-adaptation .u-contact-card:hover{transform:rotate(0);box-shadow:18px 18px 0 #000}.u-contact-banner{position:absolute;top:30px;right:-90px;background:#000;color:#fff;width:310px;padding:12px;text-align:center;transform:rotate(45deg);font-size:12px;font-weight:800;letter-spacing:1px;pointer-events:none}.ian-adaptation .u-contact-card h2{font-family:"KG Second Chances",Arial,sans-serif;font-size:clamp(26px,3.3vw,42px);line-height:1.4;letter-spacing:0;text-transform:uppercase;color:#000;margin:16px 0;border-bottom:2px solid #000;padding-bottom:14px}.ian-adaptation .u-contact-card .ian-eyebrow{color:#111}.u-contact-form{display:flex;flex-direction:column;gap:10px;margin-top:28px}.u-contact-form label{font-size:14px;font-weight:750;color:#000}.u-contact-form input,.u-contact-form textarea{width:100%;min-width:0;padding:12px;border:4px solid #000;border-radius:0;font:16px/1.5 Arial,sans-serif;background:#fff;color:#111;margin-bottom:10px}.u-contact-form textarea{resize:vertical}.u-contact-form input:focus-visible,.u-contact-form textarea:focus-visible{outline:3px solid #147ca8;outline-offset:3px}.u-contact-submit{border:4px solid #000;background:#000;color:#fff;padding:14px;font-size:17px;font-weight:800;text-transform:uppercase;cursor:pointer;transition:transform .2s,box-shadow .2s}.u-contact-submit:hover{background:#fff;color:#000;transform:translateY(-3px);box-shadow:0 4px #000}.u-contact-submit:active{transform:none;box-shadow:none}.ian-adaptation .u-contact-help{font-size:13px;line-height:1.5;margin:4px 0;color:#444}.u-contact-card .ian-actions{justify-content:flex-start;gap:12px}.u-contact-card .ian-actions a{font-size:12px}.u-contact-form button:focus-visible,.u-big-button:focus-visible,.u-ticket-link:focus-visible{outline:3px solid #139bd1;outline-offset:5px}
+/* Ticket sizing preserves the supplied artwork at readable landing-page scale. */
+.ian-adaptation .projects-grid{align-items:start;gap:44px;max-width:1100px;padding:12px}.u-ticket-wrapper{font-size:14px;min-width:0;width:100%;--t-accent:#a78bfa;--t-accent-glow:#7c3aed66;--t-text-muted:#bdc7d6}.u-ticket{width:100%;font-family:"Segoe UI",Arial,sans-serif}.u-t-main{padding:28px;min-height:420px}.u-t-header{gap:12px;align-items:center}.u-t-type{font-size:10px}.ian-adaptation .u-t-title{font-size:clamp(26px,3vw,42px);margin:22px 0 16px;line-height:1.15}.ian-adaptation .u-t-subtitle{font-size:15px;line-height:1.7;margin-bottom:28px;color:var(--t-text-muted)}.u-t-label{font-size:10px}.u-t-value{font-size:14px;line-height:1.5}.u-ticket-preview{display:block;width:100%;height:auto;border-radius:6px;aspect-ratio:786/480;object-fit:contain}.u-t-stub{gap:14px;flex-wrap:wrap;padding:24px 28px}.u-ticket-link{display:inline-flex;align-items:center;justify-content:center;min-height:44px;background:#a78bfa;color:#10071d;padding:12px 16px;font-size:14px;font-weight:800;text-decoration:none;border-radius:5px;position:relative;z-index:11}.u-ticket-link:hover{background:#c4b5fd}.u-t-perforation{position:absolute;bottom:0;left:0;width:100%;transform:translateY(50%)}.u-t-barcode-id{font-size:9px}.u-t-barcode{width:110px;height:30px}.u-ticket::after{pointer-events:none}
+@media(max-width:760px){.ian-adaptation .projects-grid{grid-template-columns:1fr;gap:38px;padding:6px}.u-t-main{min-height:0;padding:24px}.ian-adaptation .ian-contact.u-contact-card{padding:74px 20px 28px;border-width:5px;box-shadow:8px 8px #000;transform:none}.ian-adaptation .u-contact-card:hover{transform:none;box-shadow:8px 8px #000}.u-contact-banner{top:23px;right:-102px;font-size:10px}.ian-adaptation .u-window{box-shadow:6px 6px #000}.u-switch-label{font-size:12px}.u-small-toggle.ian-menu-toggle .u-switch-label{display:none}.u-switch-track{width:62px;height:34px}.u-switch-track::before{width:24px;height:24px;top:5px;left:5px}.u-small-toggle[aria-expanded=true] .u-switch-track::before,.u-small-toggle[aria-pressed=true] .u-switch-track::before{left:33px}.u-t-details{gap:16px}.u-window-content{padding:24px}}
+@media(prefers-reduced-motion:reduce){.u-ticket,.u-ticket::after,.u-t-main::after,.u-small-toggle *,.u-window,.u-contact-card,.u-big-button,.u-contact-submit{animation:none!important;transition:none!important;transform:none!important;translate:none!important}.u-ticket-wrapper:hover .u-ticket,.u-ticket-wrapper:active .u-ticket{transform:none}.u-ticket-wrapper:active .u-t-stub{transform:none;opacity:1}}
